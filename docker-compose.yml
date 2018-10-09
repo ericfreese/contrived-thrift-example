@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  add:
+    build: ./services/add
+
+  multiply:
+    build: ./services/multiply
+
+  calculator:
+    build: ./services/calculator
+    depends_on:
+      - add
+      - multiply
+
